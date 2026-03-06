@@ -1,0 +1,32 @@
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2em;
+}
+
+.card {
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 8px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+.card h4 {
+    margin-top: 0;
+    margin-bottom: 1em;
+    text-align: left;
+    text-decoration: underline;
+}
+
+.formulas-container div {
+    padding-left: 2em;
+}
+
+.application-card {
+    border: 1px solid black;
+    padding: 1em;
+    border-radius: 1em;
+    box-shadow: 8px 5px 10px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics</title>
+    <link rel="stylesheet" href="./styling/styles.css">
+    <link rel="stylesheet" href="./styling/card.css">
+
+    <script>
+        window.MathJax = {
+            tex: {
+            inlineMath: [['$', '$'], ['\\(', '\\)']]
+            }
+        };
+    </script>
+      
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
+    <script src="index.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <img src="./images/logo.png" alt="Physics 2210 Logo" class="logo">
+        <h1>Physics 2210</h1>
+        <hr />
+    </header>
+
+    <main class="main-container">
+        <aside>
+            <h2>Navigation</h2>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#formulas">Formulas</a></li>
+                    <li><a href="#applications">Applications</a></li>
+                    <li><a href="#memes">Memes</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <div class="main-content">
+            <section id="home">
+                <h2>Home</h2>
+                <p>Welcome to the Physics 2210 website. This is a collection of things, formulas and applications of thigs I have learned in the class to use as notes for myself.</p>
+                <p>I intend to have a section for formulas that is divided into the relevant categories, and a section for applications of the formulas based on my understanding of the subjec.</p>
+            </section>
+            
+            <section id="formulas" class="formulas-container">
+                <h2>Formulas</h2>
+
+                <div>
+                    <h3 class="underline-text">Chapter 2: Kinematics</h3>
+                    <div class="card-container">
+                        <div class="card">
+                            <h4>Newtons Second Law</h4>
+                            <p>$F = ma$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Gravity Force</h4>
+                            <p>$F_g = mg$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Normal Force</h4>
+                            <p>$F_N = N$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Friction Force</h4>
+                            <p>$F_f = \mu N$</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="underline-text">Chapter 3: Energy and Work</h3>
+                    <div class="card-container">
+                        <div class="card">
+                            <h4>Hooke's Law</h4>
+                            <p>$F = -kx$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Work</h4>
+                            <p>$W = Fd \cos \theta$</p>
+                            <p>$\sum W = \Delta T$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Kinetic Energy</h4>
+                            <p>$T = \frac{1}{2}mv^2$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Potential Energy</h4>
+                            <p>$U = mgh$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Elastic Potential Energy</h4>
+                            <p>$U_s = \frac{1}{2}kx^2$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Linear Momentum</h4>
+                            <p>$p = mv$</p>
+                            <h4>Inelastic Collision</h4>
+                            <p>$v_f = \frac{m_1v_1 + m_2v_2}{m_1 + m_2}$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Power</h4>
+                            <p>$P = \frac{W}{t}$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Centripetal Force</h4>
+                            <p>$F_c = \frac{mv^2}{r}$</p>
+                        </div>
+                        <div class="card">
+                            <h4>Impulse-Momentum Theorem</h4>
+                            <p>$J = \Delta p$</p>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+
+            <section id="applications" class="formulas-container"> 
+                <h2>Applications</h2>
+                <div class="application-container">
+                    <div class="application-card">
+                        <h3 class="underline-text">Conservation of Energy</h3>
+                        <p>A roller coaster car sits atop a 30-meter tall lift hill. How fast (in m/s) will the car be traveling when it reaches the bottom? (ignore friction and drag)</p>
+                        <p><span class="underline-text">Solution:</span> Using the conservation of energy, we can set the initial potential energy equal to the final kinetic energy. <br>
+                            $mgh = \frac{1}{2}mv^2$ <br>
+                            $v = \sqrt{2gh}$ <br>
+                            $v = \sqrt{2 \times 9.8 \times 30} = 24.25 \frac{m}{s}$
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="memes" class="memes-container-parent">
+                <h2>Memes</h2>
+                <div class="meme-container">
+                    <button class="btn btn-prev" id="btn-prev">&larr;</button>
+                    
+                    <figure>
+                        <img src="./images/image1.png" alt="Meme 1" class="meme-image" id="meme-image">
+                        <figcaption id="meme-caption" class="meme-caption">Max planck after quantum physics</figcaption>
+                    </figure>
+
+                    <button class="btn btn-next" id="btn-next">&rarr;</button>
+                </div>
+
+                <div class="meme-container">
+                    <iframe class="youtube-video" src="https://www.youtube.com/embed/3mqy5uWXvzM?si=I6dZ8kZq6Z_0OQoP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
+            </section>
+
+            <section id="contact">
+                <h2>Contact</h2>
+                <div class="contact-container">
+                    <p><b>Name:</b> Cracky the Snacky</p>
+                    <p><b>Email:</b> cracky@cheeshead.com</p>
+                    <p><b>Phone:</b> +45 33 40 10 10</p>
+                    <p><b>Address:</b> Amalienborg Slotsplads 8</p>
+                    <p><b>City:</b> København K</p>
+                    <p><b>State:</b> Københavns Kommune</p>
+                    <p><b>Zip:</b> 1257</p>
+                    <p><b>Country:</b> Denmark</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+
+    <footer>
+        <hr>
+        <p>Vebjørn Øglend <br> CS 2550 - Project 3</p>
+    </footer>
+</body>
+</html>
