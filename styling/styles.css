@@ -1,8 +1,17 @@
+/* No feedback given for css, and I don't think I made any substantial changes to this file */
+
+:root {
+    --text-size: 12pt;
+    --background-color: #f0f0f0;
+    --text-color: black;
+}
+
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 12pt;
     margin: 0 10vw;
-    background-color: #f0f0f0;
+    font-size: var(--text-size);
+    background-color: var(--background-color);
+    color: var(--text-color);
 }
 
 .main-container {

@@ -1,0 +1,93 @@
+/*
+    Changes:
+    - Changed background color, and text color
+    - Changed color of links
+    - Changed card background color, border color, and box shadow color
+    - Changed card container to 4 columns
+    - Changed contact container to 4 columns
+    - Changed btn background color
+    - Changed meme caption color
+    - Changed meme image background color
+    - Changed aside text alignment to right and move navigation menu to the right
+
+    Known issues:
+    - When toggling the dark theme, the logo does not change color, I did not bother recreating the logo with a white text color.
+*/
+
+:root {
+    --text-color: white;
+    --text-a-color: rgb(39, 156, 192);
+    --background-color: rgb(51, 65, 78);
+    --text-size: 12pt;
+    --background-card-color: rgb(100, 115, 130);
+    --columns: 4;
+}
+
+.main-container {
+    grid-template-columns: 85% 15%;
+}
+
+.aside {
+    order: 1;
+    text-align: right;
+}
+
+ul li a {
+    color: var(--text-a-color);
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    gap: 2em;
+}
+
+.card {
+    background-color: var(--background-card-color);
+    border: 1px solid rgb(255, 165, 0);
+    box-shadow: 8px 5px 10px 0 rgba(255, 165, 0, 0.25);
+}
+
+.application-card {
+    background-color: var(--background-card-color);
+    border: 1px solid rgb(255, 165, 0);
+    box-shadow: 8px 5px 10px 0 rgba(255, 165, 0, 0.25);
+}
+
+.meme-image {
+    background-color: var(--background-color);
+}
+
+.btn {
+    background-color: var(--background-card-color);
+}
+
+.meme-caption {
+    color: var(--text-color);
+}
+
+.contact-container {
+    grid-template-columns: repeat(var(--columns), 1fr);
+}
+
+
+@media (max-width: 768px) {
+    .main-container {
+        grid-template-columns: 1fr;
+    }
+
+    .card-container {
+        display: grid;
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .aside {
+        display: block;
+        text-align: left;
+        order: -1;
+    }
+}

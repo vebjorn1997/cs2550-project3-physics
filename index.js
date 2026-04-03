@@ -56,4 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
         imageElement.src = images[currentIndex].image;
         memeCaption.textContent = images[currentIndex].caption;
     });
+
+    const sheet = document.getElementById('theme-dark-link');
+
+    document.getElementById("theme-dark-btn").addEventListener("click", () => {
+        sheet.disabled = !sheet.disabled;
+    });
 });
