@@ -1,0 +1,60 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding: 1em;
+}
+
+.form-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 calc(50% - 1em);
+    min-width: 220px;
+    gap: 0.35em;
+}
+
+.checkbox-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35em;
+}
+
+.checkbox-row .field-error {
+    flex-basis: 100%;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.5em;
+    box-shadow: 2px 5px 5px 0 rgba(0, 0, 0, 0.5);
+    background-color: white;
+}
+
+input.was-validated:invalid {
+    color: red;
+    border: 1px solid red;
+}
+
+.field-error {
+    font-size: 0.875rem;
+    color: red;
+}
+
+input.was-validated:invalid ~ div.field-error {
+    display: block;
+}
+
+input:valid ~ div.field-error {
+    display: none;
+}
+
+input:invalid ~ div.field-error {
+    display: none;
+}

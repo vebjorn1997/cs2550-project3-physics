@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="./styling/styles.css">
     <link rel="stylesheet" href="./styling/card.css">
     <link rel="stylesheet" href="./styling/phoneTheme.css">
+    <link rel="stylesheet" href="./styling/form.css">
     <link id="theme-dark-link" rel="stylesheet" href="./styling/darktheme.css" disabled>
 
     <script>
@@ -18,9 +19,11 @@
     </script>
       
     <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js" async></script>
-    <script src="index.js"></script>
-
+    <script src="./js/pages.js"></script>
+    <script src="./js/validation.js"></script>
+    <script src="./js/main.js"></script>
 </head>
+
 <body>
     <header class="header">
         <img src="./images/logo.png" alt="Physics 2210 Logo" class="logo">
@@ -40,6 +43,7 @@
                     <li><a href="#applications">Applications</a></li>
                     <li><a href="#memes">Memes</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a href="#log-visit">Log Visit</a></li>
                 </ul>
             </nav>
         </aside>
@@ -168,6 +172,84 @@
                     <p><b>Zip:</b> 1257</p>
                     <p><b>Country:</b> Denmark</p>
                 </div>
+            </section>
+            
+            <section id="log-visit">
+            <button id="show-form-btn" class="btn-submit" type="button">Open Contact Form</button>
+
+            <div id="success-message" hidden>
+                <h2>Success</h2>
+                <p>Thank you for your visit!</p>
+            </div>
+
+            <div id="form-container" hidden>
+                <form id="myform" class="form" novalidate>
+                    <h2>Contact Form</h2>
+                    <div class="form-container">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input type="text" id="first-name" name="first-name" placeholder="Enter your first name" required>
+                            <div class="field-error" id="first-name-error" role="alert"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input type="text" id="last-name" name="last-name" placeholder="Enter your last name" required>
+                            <div class="field-error" id="last-name-error" role="alert"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                            <div class="field-error" id="email-error" role="alert"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <div class="field-error" id="phone-error" role="alert"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" name="address" placeholder="Enter your address" required>
+                            <div class="field-error" id="address-error" role="alert"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" id="city" name="city" placeholder="Enter your city" required>
+                            <div class="field-error" id="city-error" role="alert"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="state">State</label>
+                            <input type="text" id="state" name="state" placeholder="Enter your state" required>
+                            <div class="field-error" id="state-error" role="alert"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="zip">Zip</label>
+                            <input type="text" id="zip" name="zip" placeholder="Enter your zip code" required>
+                            <div class="field-error" id="zip-error" role="alert"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>How did you find this page?</label>
+                            <div class="checkbox-row">
+                                <input type="checkbox" id="find-internet" name="find-method" value="Internet">
+                                <label for="find-internet">Internet</label>
+                                <div class="field-error" id="find-internet-error" role="alert"></div>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="find-friend" name="find-method" value="Friend">
+                                <label for="find-friend">Friend</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="find-google" name="find-method" value="Google">
+                                <label for="find-google">Google</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <button type="submit" id="submitBtn" class="btn-submit">Submit</button>
+                    </div>
+                </form>
+            </div>
             </section>
         </div>
     </main>

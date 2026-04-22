@@ -1,5 +1,6 @@
-document.addEventListener("DOMContentLoaded", () => {
+/* Disclaimer, I wrote this code. */
 
+document.addEventListener("DOMContentLoaded", () => {
     const images = {
         0: {
             image: "./images/image1.png",
@@ -38,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
             caption: "Sum vs integral"
         }
     }
-
 
     let currentIndex = 0;
     const imageElement = document.getElementById("meme-image");
