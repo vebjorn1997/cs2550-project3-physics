@@ -20,12 +20,13 @@ function initValidation(formId, successId) {
 
   let inputs = form.querySelectorAll("input");
   for (const input of inputs) {
-    input.addEventListener("change", inputChanged );
+    input.addEventListener("input", fieldInteracted);
+    input.addEventListener("blur", fieldInteracted);
   }
   form.addEventListener("submit", submitForm );
 }
 
-function inputChanged(ev) {
+function fieldInteracted(ev) {
   let el = ev.currentTarget;
   validateForm();
   el.classList.add("was-validated");
